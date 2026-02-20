@@ -11,17 +11,8 @@ with structured evidence and GenAI-style narrative outputs for fraud investigati
 
 ## Setup
 
-### 1) Download the Dataset
 
-Download the public credit card fraud dataset and place it here:
-
-```
-data/creditcard.csv
-```
-
----
-
-### 2) Create Virtual Environment + Install Dependencies
+### 1) Create Virtual Environment + Install Dependencies
 
 ```powershell
 python -m venv .venv
@@ -37,7 +28,7 @@ source .venv/bin/activate
 
 ---
 
-### 3) Run the Project
+### 2) Run the Project
 
 ```powershell
 python .\run.py
