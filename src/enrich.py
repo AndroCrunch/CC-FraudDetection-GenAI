@@ -12,14 +12,14 @@ class EnrichmentArtifacts:
     geo_id: np.ndarray
 
 def enrich_transactions(df: pd.DataFrame, cfg: Config) -> tuple[pd.DataFrame, EnrichmentArtifacts]:
-    """"""
+    """
     Enriches credit card transactions with synthetic categorical IDs:
     card_id, merchant_id, device_id, ip_id, geo_id.
 
     Assumptions:
     - We don't have real entities in the public dataset, so we simulate.
     - Each transaction is assigned a card_id; merchants are biased; devices/IPs mostly stable per card.
-    """"""
+    """
     rng = np.random.default_rng(cfg.seed)
     n = len(df)
 
@@ -52,10 +52,11 @@ def enrich_transactions(df: pd.DataFrame, cfg: Config) -> tuple[pd.DataFrame, En
     geo_id[travel_mask] = rng.integers(0, cfg.n_geos, size=travel_mask.sum())
 
     out = df.copy()
-    out[""card_id""] = card_id
-    out[""merchant_id""] = merchant_id
-    out[""device_id""] = device_id
-    out[""ip_id""] = ip_id
-    out[""geo_id""] = geo_id
+    out["card_id"] = card_id
+    out["merchant_id"] = merchant_id
+    out["device_id"] = device_id
+    out["ip_id"] = ip_id
+    out["geo_id"] = geo_id
 
     return out, EnrichmentArtifacts(card_id, merchant_id, device_id, ip_id, geo_id)
+

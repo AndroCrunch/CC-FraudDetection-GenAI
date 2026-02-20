@@ -1,0 +1,22 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+venv/
+
+# Data / artifacts / outputs
+data/creditcard.csv
+artifacts/
+outputs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
