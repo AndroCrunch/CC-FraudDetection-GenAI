@@ -1,11 +1,10 @@
-# Fraud Detection with Explainable AI & GenAI Reporting
+# Credit Card Fraud Detection with Explainable AI
 
-This project trains a baseline fraud scorer (LightGBM) on the public credit card dataset,
-enriches it with synthetic entity fields, computes SHAP drivers,
-builds **Evidence JSON**, and generates two grounded explanations (analyst + plain language).
+This project trains a baseline fraud scorer LightGBM (Light Gradient-Boosting Machine) on the public credit card dataset,
+computes SHAP drivers, and generates grounded explanations (analyst + plain language). An explainable fraud alert workflow is established, where every flagged transaction is accompanied by structured evidence and traceable reasoning, improving transparency for investigation and audit purposes.
 
 The goal is to demonstrate how traditional ML scoring + explainability can be combined
-with structured evidence and GenAI-style narrative outputs for fraud investigations.
+with structured evidence and GenAI to support credit card fraud investigations.
 
 ---
 
